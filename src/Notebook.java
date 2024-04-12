@@ -83,18 +83,38 @@ public class Notebook {
     public void JavaLoopsTwo() {
         Scanner scanner = new Scanner(System.in);
         // pegando o valor de q
+        System.out.println("Digite o valor de q: ");
         int q = scanner.nextInt();
         scanner.nextLine();
         // pegando o valor de a,b e n
+        System.out.println("Digite o valor de a: ");
         int a = scanner.nextInt();
+        System.out.println("Digite o valor de b: ");
         int b = scanner.nextInt();
+        System.out.println("Digite o valor de n: ");
         int n = scanner.nextInt();
         scanner.close();
+        if (q < 0 || q > 500) {
+            System.out.println("O valor de q deve ser entre 0 e 500");
+            return;
+        }
+        if (a < 0 || a > 50) {
+            System.out.println("O valor de a deve ser entre 0 e 50");
+            return;
+        }
+        if (b < 0 || b > 50) {
+            System.out.println("O valor de b deve ser entre 0 e 50");
+            return;
+        }
+        if (n < 1 || n > 15) {
+            System.out.println("O valor de n deve ser entre 1 e 15");
+            return;
+        }
         for(int i = 0; i < q ; i++){
             int sum = a;
             for(int j = 0; j < n; j++){
                 sum += Math.pow(2, j) * b;
-                System.out.print(sum + " ");
+                System.out.printf("%-10s ",sum);
             }
             System.out.println();
         }

@@ -1,14 +1,16 @@
+
 import java.util.Scanner;
 
 public class CallClasses {
+
     public static void main(String[] args) {
         Notebook notebook = new Notebook();
+        int choice;
         Scanner scanner = new Scanner(System.in);
         System.out.printf("Escolha qual executar :\n1 - WelcomeToJava\n2 - JavaStdInOne\n3 - JavaIfElse\n4 - JavaStdInTwo\n5 - JavaOutputFormatting\n6 - JavaLoopsOne\n7 - JavaLoopsTwo\n8 - JavaDataTypes\n");
-        int choice = scanner.nextInt();
-        scanner.close();
+        choice = scanner.nextInt();
         switch (choice) {
-            case 1:
+            case 1 :
                 notebook.WelcomeToJava();
                 break;
             case 2:
@@ -34,6 +36,8 @@ public class CallClasses {
                 break;
             default:
                 System.out.println("Opção inválida");
+                scanner.close();
         }
     }
 }
+
