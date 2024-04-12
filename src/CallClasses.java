@@ -7,9 +7,10 @@ public class CallClasses {
         Notebook notebook = new Notebook();
         int choice;
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("Escolha qual executar :\n1 - WelcomeToJava\n2 - JavaStdInOne\n3 - JavaIfElse\n4 - JavaStdInTwo\n5 - JavaOutputFormatting\n6 - JavaLoopsOne\n7 - JavaLoopsTwo\n8 - JavaDataTypes\n");
-        choice = scanner.nextInt();
-        switch (choice) {
+        do {
+            System.out.printf("Escolha qual executar :\n1 - WelcomeToJava\n2 - JavaStdInOne\n3 - JavaIfElse\n4 - JavaStdInTwo\n5 - JavaOutputFormatting\n6 - JavaLoopsOne\n7 - JavaLoopsTwo\n8 - JavaDataTypes\n9 - Sair\n");
+            choice = scanner.nextInt();
+            switch (choice) {
             case 1 :
                 notebook.WelcomeToJava();
                 break;
@@ -34,10 +35,13 @@ public class CallClasses {
             case 8:
                 notebook.JavaDataTypes();
                 break;
+            case 9:
+                System.out.println("Saindo...");
+                break;
             default:
                 System.out.println("Opção inválida");
-                scanner.close();
-        }
+            }
+        } while (choice != 9);
     }
 }
 
